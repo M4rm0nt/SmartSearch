@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Artikelsuche</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-app="sucheApp" ng-controller="SuchController">
+
+<div class="search-box">
+    <input type="text" ng-model="ean" ng-change="sucheEan()" placeholder="EAN eingeben" />
+</div>
+<div class="card" ng-repeat="artikel in artikelListe">
+    <div class="container">
+        <h4><b>{{artikel.name}}</b></h4>
+    </div>
+</div>
+
+</body>
+</html>
